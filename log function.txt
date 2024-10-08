@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    // Return positive integer if the number is
+    // greater than 1
+    cout << log(11) << endl;
+
+    // Return negative integer if the number is
+    // between 0 and 1 (not inclusive)
+    cout << log(0.5) << endl;
+
+    // Return 0 if the number is 1
+    cout << log(1) << endl;
+
+    // Return -inf (infinity) if the number is 0
+    cout << log(0) << endl;
+
+    // Return inf (infinity) if the number is very large
+    cout << log(1e1000) << endl;
+
+    // Return NaN (Not a Number) if the number is ngative
+    cout << log(-11) << endl;
+
+    return 0;
+}
