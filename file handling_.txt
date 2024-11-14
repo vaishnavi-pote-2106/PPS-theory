@@ -1,0 +1,29 @@
+#include <iostream>
+
+#include <fstream>
+
+using namespace std;
+int main() {
+// Writing to a file
+ofstream outFile("example.txt");
+if (outFile.is_open()) {
+outFile << "Hello, this is a sample text file!" << endl;
+outFile << "File handling in C++ is powerful." << endl;
+outFile.close();
+cout << "Data written to file successfully!" << endl;
+} else {
+cout << "Unable to open file for writing." << endl;
+}
+// Reading from a file
+ifstream inFile("example.txt");
+if (inFile.is_open()) {
+string line;
+while (getline(inFile, line)) {
+cout << line << endl;
+}
+inFile.close();
+} else {
+cout << "Unable to open file for reading." << endl;
+}
+return 0;
+}
